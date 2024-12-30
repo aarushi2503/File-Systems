@@ -1,0 +1,15 @@
+umount mnt
+rmdir mnt
+rm disk.img
+make clean
+clear
+
+clear
+make
+./create_disk.sh
+./mkfs -d disk.img -i 32 -b 200
+mkdir mnt
+./wfs disk.img -f -s mnt
+
+
+~cs537-1/tests/P7/tests/15
