@@ -17,9 +17,18 @@ This project implements a block-based filesystem in userspace using the FUSE lib
 2. `wfs.c`: Implements the FUSE filesystem, providing callback functions for operations like `getattr`, `mkdir`, `read`, `write`, and more.
 
 ### Setup and Usage
-1. Compile the code: `make`
-2. Create a Disk Image: `./create_disk.sh`
-3. Initialize the Filesystem: `./mkfs -d disk.img -i 32 -b 200`
+1. Compile the code:
+   ```
+   make
+   ```
+2. Create a Disk Image:
+   ```
+   ./create_disk.sh
+   ```
+3. Initialize the Filesystem:
+   ```
+   ./mkfs -d disk.img -i 32 -b 200
+   ```
 4. Mount the Filesystem:
    ```
    mkdir mnt
@@ -32,7 +41,10 @@ This project implements a block-based filesystem in userspace using the FUSE lib
    cat mnt/file.txt
    rm mnt/file.txt
    ```
-6. Unmount the Filesystem: `./umount.sh mnt`
+6. Unmount the Filesystem:
+   ```
+   ./umount.sh mnt
+   ```
 
 ### Acknowledgments
 This project was completed as part of a course assignment in collaboration with my partner. We adhered strictly to the provided project guidelines and specifications.
